@@ -439,22 +439,13 @@ body {
     border-radius: 50%;
     fill: var(--light);
     background-color: var(--primary-brand);  
-    transition-property: background-color, color;  
+    transition-property: background-color;  
     transition-duration: 250ms; 
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover {color: var(--light); background-color:  var(--pressed-state);}
-.social-link:focus {color: var(--light); background-color:  var(--pressed-state); outline: none;}
-
-.icon-social {
-    transition-property:fill;  
-    transition-duration: 250ms; 
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-social:hover {fill: var(--light);}
-.icon-social:focus {fill: var(--light);}
+.social-link:hover {background-color:  var(--pressed-state);}
+.social-link:focus {background-color:  var(--pressed-state); outline: none;}
 
 .social-link:hover .icon-social {fill: var(--light); background-color:  var(--pressed-state);}
 .social-link:focus .icon-social {fill: var(--light); background-color:  var(--pressed-state); outline: none;}
@@ -493,22 +484,13 @@ body {
     border-radius: 4px;
     align-items: center;
     justify-content: center;  
-    transition-property: background-color, color;  
+    transition-property:border-color, fill;  
     transition-duration: 250ms; 
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link:hover { color:var(--pressed-state);border-color:var(--pressed-state);}
-.clients-link:focus {color:var(--pressed-state); outline: none; border-color:var(--pressed-state);}
-
-.icon-clients {
-  transition-property:fill;  
-  transition-duration: 250ms; 
-  transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-clients:hover {fill:var(--pressed-state);}
-.icon-clients:focus {fill:var(--pressed-state);}
+.clients-link:hover {border-color:var(--pressed-state);}
+.clients-link:focus {outline: none; border-color:var(--pressed-state);}
 
 .clients-link:hover .icon-clients { fill:var(--pressed-state);border-color:var(--pressed-state);}
 .clients-link:focus .icon-clients { fill:var(--pressed-state);border-color:var(--pressed-state);}
@@ -694,19 +676,6 @@ body {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);  
 }
 
-.img-area::before {
-    display: inline-block;
-    position: absolute;
-    content: '';
-    top: 0;
-    bottom: 0; 
-    left: 0;
-    right: 0;  
-    width: 100%;
-    height:100%;   
-    background-color:var(--primary-brand);
-    transform: translateY(100%);
-}
 
 .project-link:hover .img-area::before{
     transform: translateY(0);
@@ -737,6 +706,13 @@ body {
     position: absolute;
     top: 0;
     transform: translateY(100%);
+    display: inline-block;
+    content: '';
+    bottom: 0; 
+    left: 0;
+    right: 0;    
+    background-color:var(--primary-brand);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-box {
@@ -780,7 +756,7 @@ body {
     left: 0;
     z-index: 100;
     background-color:rgba(46, 47, 66, 0.4);
-    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translate(0%);
 }
   
