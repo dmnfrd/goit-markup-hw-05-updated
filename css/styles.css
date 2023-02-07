@@ -800,7 +800,7 @@ body {
 
 .modal-button:hover,
 .modal-button:focus {
-    color: var(--white);
+    fill: var(--white);
     background-color: var(--pressed-state);
 }
 
