@@ -793,26 +793,14 @@ body {
     background-color: var(--accent);
     border-radius: 50%;
     border: 1px solid #0000001A;
-    transition-property: fill, background-color;
+    transition-property: color, background-color;
     transition-duration: 250ms; 
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .modal-button:hover,
 .modal-button:focus {
-    fill: var(--white);
-    background-color: var(--pressed-state);
-}
-
-.modal-button-icon {
-    transition-property: fill, background-color;
-    transition-duration: 250ms; 
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-button-icon:hover,
-.modal-button-icon:focus {
-    fill: var(--white);
+    color: var(--white);
     background-color: var(--pressed-state);
 }
 
